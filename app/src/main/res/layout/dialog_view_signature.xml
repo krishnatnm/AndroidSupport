@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/signature_view"
+    android:layout_height="@dimen/signature_view">
+
+    <ImageView
+        android:id="@+id/dvs_signature"
+        android:layout_width="@dimen/signature_view"
+        android:layout_height="@dimen/signature_view" />
+
+</RelativeLayout>

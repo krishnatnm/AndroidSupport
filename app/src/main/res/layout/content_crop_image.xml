@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cci_entire_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tanmay.androidsupport.view.activities.CropImage"
+    tools:showIn="@layout/activity_crop_image">
+
+    <Button
+        android:id="@+id/cci_add_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_margin"
+        android:onClick="selectImage"
+        android:padding="@dimen/activity_margin"
+        android:text="Select Image" />
+
+    <ImageView
+        android:id="@+id/cci_cropped_image"
+        android:layout_width="@dimen/cropped_image"
+        android:layout_height="@dimen/cropped_image"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

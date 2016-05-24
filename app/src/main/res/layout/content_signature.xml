@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tanmay.androidsupport.view.activities.Signature"
+    tools:showIn="@layout/activity_signature">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/cs_view_previous"
+        android:background="@color/not_white"
+        android:padding="@dimen/activity_margin_half">
+
+        <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cs_signature_pad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:penColor="@android:color/black" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/cs_view_previous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cs_button_sec"
+        android:onClick="onViewPrevious"
+        android:text="View Last Signature" />
+
+    <LinearLayout
+        android:id="@+id/cs_button_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/cs_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="45"
+            android:onClick="onSaveClick"
+            android:text="Save" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10" />
+
+        <Button
+            android:id="@+id/cs_clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="45"
+            android:onClick="onClearClick"
+            android:text="Clear" />
+
+    </LinearLayout>
+
+</RelativeLayout>

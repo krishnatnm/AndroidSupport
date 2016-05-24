@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Android Support</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="API_KEY">AIzaSyDoHT4m0BRxHzkQVBpDIWB7r5P_oO0QBcc</string>
+    <string name="title_activity_google_home">GoogleHome</string>
+
+    <string name="openDrawer">Open Drawer</string>
+    <string name="closeDrawer">Close Drawer</string>
+    <string name="title_activity_draw_route">DrawRoute</string>
+    <string name="title_activity_phone_home">PhoneHome</string>
+    <string name="title_activity_add_contacts">AddContacts</string>
+    <string name="title_activity_copy_to_clipbpard">CopyToClipbpard</string>
+
+    <string name="text_copied">Text copied to clipboard</string>
+    <string name="title_activity_http_home">HttpHome</string>
+
+    <string-array name="request_types">
+        <item>POST</item>
+        <item>GET</item>
+        <item>PATCH</item>
+    </string-array>
+    <string name="title_activity_tabs_and_view_pager">TabsAndViewPager</string>
+    <string name="title_activity_flurry_analytics">FlurryAnalytics</string>
+    <string name="title_activity_facebook">Facebook</string>
+    <string name="title_activity_google">Google</string>
+
+    <string name="facebook_app_id">512121012322721</string>
+    <string name="title_activity_speedometer_view">SpeedometerView</string>
+    <string name="title_activity_google_fit">GoogleFit</string>
+    <string name="permission_rationale">Location data is used as part of the Google Fit API</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core functionality.</string>
+    <string name="intro_text">Behold, a data dump from the Fitness API! Check the menu for more actions!</string>
+    <string name="action_update_session">Update step count data</string>
+    <string name="action_delete_session">Delete step count data</string>
+    <string name="title_activity_crop_image">CropImage</string>
+    <string name="enter">tanmay.tnm@gmail.com</string>
+    <string name="xyz">Developer #TNM</string>
+    <string name="title_activity_parallax_with_web_view">ParallaxWithWebView</string>
+    <string name="title_activity_signature">Signature</string>
+    <string name="title_activity_camera_upload">CameraUpload</string>
+
+</resources>

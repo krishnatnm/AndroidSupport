@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tanmay.androidsupport.view.activities.AddContacts"
+    tools:showIn="@layout/activity_add_contacts">
+
+    <EditText
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/activity_margin"
+        android:hint="Name:"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/contact_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_name"
+        android:layout_margin="@dimen/activity_margin"
+        android:hint="Number:"
+        android:inputType="phone"
+        android:singleLine="true" />
+
+    <RelativeLayout
+        android:id="@+id/the_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:layout_margin="@dimen/activity_margin"
+        android:padding="@dimen/activity_margin"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/the_image"
+            android:layout_width="@dimen/contact_icon"
+            android:layout_height="@dimen/contact_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/activity_margin"
+            android:padding="2dp"
+            android:background="@android:color/white"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_self" />
+
+        <TextView
+            android:id="@+id/the_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/contact_sec_line_spacing"
+            android:layout_toRightOf="@+id/the_image"
+            android:singleLine="true"
+            android:text="TBD"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dialog_title_size" />
+
+        <TextView
+            android:id="@+id/the_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/the_name"
+            android:layout_toRightOf="@+id/the_image"
+            android:singleLine="true"
+            android:text="9999"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dialog_title_size" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

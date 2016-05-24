@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/not_white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dialog_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="@dimen/dialog_icon_padding"
+            android:paddingLeft="@dimen/dialog_icon_padding"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dialog_padding"
+            android:text="Enter Locations"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/dialog_title_size" />
+
+    </RelativeLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/pickup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dialog_padding"
+        android:hint="Origin"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <AutoCompleteTextView
+        android:id="@+id/destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dialog_padding"
+        android:singleLine="true"
+        android:hint="Destination"
+        android:textColor="@color/colorPrimaryDark" />
+
+
+    <Button
+        android:id="@+id/getRoute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dialog_padding"
+        android:background="@drawable/dialog_button"
+        android:text="Get the Route"
+        android:textAllCaps="false"
+        android:textSize="@dimen/dialog_title_size" />
+
+</LinearLayout>

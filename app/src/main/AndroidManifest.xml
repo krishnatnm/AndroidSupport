@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tanmay.androidsupport">
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    /////////////////////////////////////// MAPS and LOCATION //////////////////////////////////////
+    <permission
+        android:name="com.clickcab.consumerapp.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="com.clickcab.driverapp.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////// GCM //////////////////////////////////////////////
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////// PHONE and CONTACTS ///////////////////////////////////////
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////// GOOGLE LOGIN /////////////////////////////////////////
+    <!-- <uses-permission android:name="android.permission.GET_ACCOUNTS" /> -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////// ACCESS GALLERY
+    /////////////////////////////////////////
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    <application
+        android:name=".httpservice.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.activities.HomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.clickcab.driverapp.pushnotifications" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".gcm.GcmIntentService" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/API_KEY" />
+
+        <activity
+            android:name=".view.activities.SearchPlaces"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="Search Places"
+            android:parentActivityName=".view.activities.GoogleHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.GoogleHome"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_google_home"
+            android:parentActivityName=".view.activities.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.DrawRoute"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_draw_route"
+            android:parentActivityName=".view.activities.GoogleHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.PhoneHome"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_phone_home"
+            android:parentActivityName=".view.activities.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.AddContacts"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_add_contacts"
+            android:parentActivityName=".view.activities.PhoneHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.CopyToClipbpard"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_copy_to_clipbpard"
+            android:parentActivityName=".view.activities.PhoneHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.HttpHome"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_http_home"
+            android:parentActivityName=".view.activities.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.TabsAndViewPager"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_tabs_and_view_pager"
+            android:parentActivityName=".view.activities.PhoneHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.OtherHome"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_flurry_analytics"
+            android:parentActivityName=".view.activities.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.FlurryAnalytics"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_flurry_analytics"
+            android:parentActivityName=".view.activities.PhoneHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.SocialHome"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="Social Home"
+            android:parentActivityName=".view.activities.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.Facebook"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_facebook"
+            android:parentActivityName=".view.activities.SocialHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.Google"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_google"
+            android:parentActivityName=".view.activities.SocialHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:label="@string/title_activity_facebook" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="53ef6e274bd80efc6bb7121fa4248cfc2559e621" />
+
+        <activity
+            android:name=".view.activities.SpeedometerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_speedometer_view"
+            android:parentActivityName=".view.activities.DesignHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.DesignHome"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="Design Home"
+            android:parentActivityName=".view.activities.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.GoogleFit"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_google_fit"
+            android:parentActivityName=".view.activities.GoogleHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.CropImage"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_crop_image"
+            android:parentActivityName=".view.activities.GoogleHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.android.camera.CropImage" />
+        <activity
+            android:name=".view.activities.ParallaxWithWebView"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_parallax_with_web_view"
+            android:parentActivityName=".view.activities.DesignHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.Signature"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_signature"
+            android:parentActivityName=".view.activities.DesignHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.CameraUpload"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_camera_upload"
+            android:parentActivityName=".view.activities.PhoneHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+    </application>
+
+</manifest>

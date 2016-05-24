@@ -1,0 +1,56 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="activity_margin_half">8dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin_less">12dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin_more">72dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+
+    <dimen name="home_quick_view">18sp</dimen>
+
+    <dimen name="list_margin">16dp</dimen>
+    <dimen name="list_item_padding">16dp</dimen>
+    <dimen name="list_item_corner">2dp</dimen>
+    <dimen name="list_item_elevation">6dp</dimen>
+    <dimen name="list_item_margin">8dp</dimen>
+
+    <dimen name="drawer_elevation">6dp</dimen>
+    <dimen name="drawer_item_padding">16dp</dimen>
+    <dimen name="drawer_width">300dp</dimen>
+    <dimen name="drawer_header_icon">64dp</dimen>
+    <dimen name="drawer_header_padding">16dp</dimen>
+    <dimen name="drawer_header_height">128dp</dimen>
+    <dimen name="drawer_item_icon">28dp</dimen>
+    <dimen name="drawer_header_title">22sp</dimen>
+
+    <dimen name="dialog_padding">20dp</dimen>
+    <dimen name="dialog_icon_padding">20dp</dimen>
+    <dimen name="dialog_title_size">20sp</dimen>
+    <dimen name="dialog_button_stroke">0.5dp</dimen>
+
+    <dimen name="contact_icon">64dp</dimen>
+    <dimen name="contact_sec_line_spacing">10dp</dimen>
+
+    <dimen name="http_hint_size">12sp</dimen>
+
+    <dimen name="tab_icon">24dp</dimen>
+    <dimen name="tab_padding">10dp</dimen>
+    <dimen name="tab_text">10sp</dimen>
+    <dimen name="tab_indicator">16dp</dimen>
+
+    <dimen name="facebook_profile_height">300dp</dimen>
+    <dimen name="facebook_dp">100dp</dimen>
+
+    <dimen name="margin_medium">16dp</dimen>
+
+    <dimen name="cropped_image">200dp</dimen>
+
+    <dimen name="signature_view">300dp</dimen>
+
+    <dimen name="doc_image">128dp</dimen>
+
+    <dimen name="text_input_width">100dp</dimen>
+</resources>
