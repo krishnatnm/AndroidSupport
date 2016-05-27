@@ -35,9 +35,9 @@ public class Google extends AppCompatActivity implements GoogleApiClient.Connect
         GoogleApiClient.OnConnectionFailedListener {
 
     private static final int RC_SIGN_IN = 0;
-    public static String TAG = "Google ==>";
     private static final int REQ_SIGN_IN_REQUIRED = 55664;
     private static final int REQUEST_CODE_TOKEN_AUTH = 123;
+    public static String TAG = "Google ==>";
     Context context;
 
     Toolbar toolbar;
@@ -147,7 +147,47 @@ public class Google extends AppCompatActivity implements GoogleApiClient.Connect
     public void onConnected(Bundle arg0) {
         signedInUser = false;
         Toast.makeText(this, "Connected", Toast.LENGTH_LONG).show();
-        getProfileInformation();
+
+        AsyncTask<Void, Void, String> task = new AsyncTask<Void, Void, String>() {
+            @Override
+            protected String doInBackground(Void... params) {
+                String token = null;
+
+                try {
+
+
+                    token = GoogleAuthUtil.getToken(
+                            Google.this,
+                            Plus.AccountApi.getAccountName(mGoogleApiClient),
+                            "oauth2:" + Scopes.PLUS_LOGIN + " " + Scopes.PLUS_ME
+                                    + " https://www.googleapis.com/auth/plus.profile.emails.read");
+                } catch (IOException transientEx) {
+                    // Network or server error, try later
+                    Log.e(TAG, transientEx.toString());
+                } catch (UserRecoverableAuthException e) {
+                    // Recover (with e.getIntent())
+                    Log.e(TAG, e.toString());
+                    Intent recover = e.getIntent();
+                    startActivityForResult(recover, REQUEST_CODE_TOKEN_AUTH);
+                } catch (GoogleAuthException authEx) {
+                    // The call is not ever expected to succeed
+                    // assuming you have already verified that
+                    // Google Play services is installed.
+                    Log.e(TAG, authEx.toString());
+                }
+
+                return token;
+            }
+
+            @Override
+            protected void onPostExecute(String token) {
+                Log.i(TAG, "Access token retrieved:" + token);
+
+                getProfileInformation();
+            }
+
+        };
+        task.execute();
     }
 
     private void updateProfile(boolean isSignedIn) {
@@ -167,50 +207,6 @@ public class Google extends AppCompatActivity implements GoogleApiClient.Connect
                 String personName = currentPerson.getDisplayName();
                 String personPhotoUrl = currentPerson.getImage().getUrl();
                 String email = Plus.AccountApi.getAccountName(mGoogleApiClient);
-//                String token = GoogleAuthUtil.getToken(context,
-//                        Plus.AccountApi.getAccountName(mGoogleApiClient),
-//                        "oauth2:" + Scopes.PLUS_LOGIN + " " + Scopes.PLUS_ME
-//                                + " https://www.googleapis.com/auth/plus.profile.emails.read");
-//                Log.d(TAG, "Google Token: " + token);
-
-                AsyncTask<Void, Void, String> task = new AsyncTask<Void, Void, String>() {
-                    @Override
-                    protected String doInBackground(Void... params) {
-                        String token = null;
-
-                        try {
-
-
-                            token = GoogleAuthUtil.getToken(
-                                    Google.this,
-                                    Plus.AccountApi.getAccountName(mGoogleApiClient),
-                                    "oauth2:" + Scopes.PLUS_LOGIN + " " + Scopes.PLUS_ME
-                                            + " https://www.googleapis.com/auth/plus.profile.emails.read");
-                        } catch (IOException transientEx) {
-                            // Network or server error, try later
-                            Log.e(TAG, transientEx.toString());
-                        } catch (UserRecoverableAuthException e) {
-                            // Recover (with e.getIntent())
-                            Log.e(TAG, e.toString());
-                            Intent recover = e.getIntent();
-                            startActivityForResult(recover, REQUEST_CODE_TOKEN_AUTH);
-                        } catch (GoogleAuthException authEx) {
-                            // The call is not ever expected to succeed
-                            // assuming you have already verified that
-                            // Google Play services is installed.
-                            Log.e(TAG, authEx.toString());
-                        }
-
-                        return token;
-                    }
-
-                    @Override
-                    protected void onPostExecute(String token) {
-                        Log.i(TAG, "Access token retrieved:" + token);
-                    }
-
-                };
-                task.execute();
 
                 username.setText(personName);
                 emailLabel.setText(email);
