@@ -62,7 +62,7 @@
         </activity>
 
         <receiver
-            android:name=".gcm.GcmBroadcastReceiver"
+            android:name=".gcm.GcmBroadcastReceiverOld"
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -72,7 +72,7 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".gcm.GcmIntentService" />
+        <service android:name=".gcm.GcmIntentServiceOld" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -232,6 +232,17 @@
             android:label="@string/title_activity_camera_upload"
             android:parentActivityName=".view.activities.PhoneHome"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.ChatHome"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_chat_home"
+            android:parentActivityName=".view.activities.PhoneHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.OtpInput"
+            android:label="@string/title_activity_otp_input"
             android:theme="@style/AppTheme"></activity>
     </application>
 

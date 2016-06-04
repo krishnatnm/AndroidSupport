@@ -100,12 +100,12 @@ public class HomeActivity extends AppCompatActivity implements OnDrawerItemClick
 
 //        testDate();
 
-        quickView.setText("Do Not Click!");
+        quickView.setText("OTP");
         quickView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent i = new Intent(context, ParallaxWithWebView.class);
-//                startActivity(i);
+                Intent i = new Intent(context, OtpInput.class);
+                startActivity(i);
             }
         });
 
@@ -137,6 +137,9 @@ public class HomeActivity extends AppCompatActivity implements OnDrawerItemClick
                 break;
             case 4:
                 startActivity(new Intent(context, DesignHome.class));
+                break;
+            case 5:
+                startActivity(new Intent(context, ChatHome.class));
                 break;
             case 6:
                 startActivity(new Intent(context, OtherHome.class));

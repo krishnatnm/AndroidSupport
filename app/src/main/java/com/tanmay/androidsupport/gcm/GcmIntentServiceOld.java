@@ -18,15 +18,15 @@ import com.tanmay.androidsupport.utils.ConstantClass;
 /**
  * Created by TaNMay on 3/3/2016.
  */
-public class GcmIntentService extends IntentService {
+public class GcmIntentServiceOld extends IntentService {
 
     public static final int NOTIFICATION_ID = 1;
-    public static String TAG = "GcmIntentService ==>";
-    public static GcmInterface gcmInterface;
+    public static String TAG = "GcmIntentServiceOld ==>";
+    public static GcmInterfaceOld gcmInterfaceOld;
     static NotificationManager mNotificationManager;
 
-    public GcmIntentService() {
-        super("GcmIntentService");
+    public GcmIntentServiceOld() {
+        super("GcmIntentServiceOld");
     }
 
     @Override
@@ -60,7 +60,7 @@ public class GcmIntentService extends IntentService {
                 }
             }
         }
-        GcmBroadcastReceiver.completeWakefulIntent(intent);
+        GcmBroadcastReceiverOld.completeWakefulIntent(intent);
     }
 
     private void sendNotification(String message) {
@@ -71,8 +71,8 @@ public class GcmIntentService extends IntentService {
 
         String notification_type = message;
 
-        if (gcmInterface != null) {
-            gcmInterface.notificationReceived(true, notification_type);
+        if (gcmInterfaceOld != null) {
+            gcmInterfaceOld.notificationReceived(true, notification_type);
         }
 
         Intent i = new Intent(getApplicationContext(), HomeActivity.class);

@@ -72,9 +72,18 @@ public class GoogleFit extends AppCompatActivity {
 
         DataReadRequest readRequest = new DataReadRequest.Builder()
                 .aggregate(ESTIMATED_STEP_DELTAS, DataType.AGGREGATE_STEP_COUNT_DELTA)
+//                .aggregate(DataType.TYPE_DISTANCE_DELTA, DataType.AGGREGATE_DISTANCE_DELTA)
+//                .aggregate(DataType.TYPE_CALORIES_EXPENDED, DataType.AGGREGATE_CALORIES_EXPENDED)
+//                .aggregate(DataType.TYPE_ACTIVITY_SEGMENT, DataType.AGGREGATE_ACTIVITY_SUMMARY)
                 .bucketByTime(1, TimeUnit.DAYS)
                 .setTimeRange(startTime, endTime, TimeUnit.MILLISECONDS)
                 .build();
+
+//        DataReadRequest readRequest = new DataReadRequest.Builder()
+//                .aggregate(ESTIMATED_STEP_DELTAS, DataType.AGGREGATE_STEP_COUNT_DELTA)
+//                .bucketByTime(1, TimeUnit.DAYS)
+//                .setTimeRange(startTime, endTime, TimeUnit.MILLISECONDS)
+//                .build();
 
         return readRequest;
     }
@@ -84,7 +93,7 @@ public class GoogleFit extends AppCompatActivity {
         Date now = new Date();
         cal.setTime(now);
         long endTime = cal.getTimeInMillis();
-        cal.add(Calendar.WEEK_OF_YEAR, -1);
+        cal.add(Calendar.DAY_OF_YEAR, -1);
         long startTime = cal.getTimeInMillis();
 
         java.text.DateFormat dateFormat = getDateInstance();
@@ -170,7 +179,7 @@ public class GoogleFit extends AppCompatActivity {
                             public void onConnected(Bundle bundle) {
                                 Log.i(TAG, "Connected!!!");
                                 new InsertAndVerifyDataTask().execute();
-                                new InsertAndVerifyCalorieDataTask().execute();
+//                                new InsertAndVerifyCalorieDataTask().execute();
                                 pDialog.setMessage("Getting data from Google Fit...");
                                 pDialog.setCancelable(false);
                                 pDialog.show();
@@ -300,6 +309,12 @@ public class GoogleFit extends AppCompatActivity {
             printData(dataReadResult);
 
             return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            pDialog.dismiss();
         }
     }
 

@@ -57,6 +57,7 @@ public class PhoneHome extends AppCompatActivity implements OnLandingItemClickLi
         listItems.add("Tabs and View Pager");
         listItems.add("Crop Image");
         listItems.add("Camera Upload");
+        listItems.add("OTP");
 
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(context);
@@ -96,6 +97,9 @@ public class PhoneHome extends AppCompatActivity implements OnLandingItemClickLi
                 break;
             case 4:
                 startActivity(new Intent(context, CameraUpload.class));
+                break;
+            case 5:
+                startActivity(new Intent(context, OtpInput.class));
                 break;
             default:
                 Toast.makeText(context, "To Be Done!", Toast.LENGTH_SHORT).show();

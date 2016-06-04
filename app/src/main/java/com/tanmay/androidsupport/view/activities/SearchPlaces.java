@@ -31,7 +31,8 @@ import com.tanmay.androidsupport.view.interfaces.GeocoderListener;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SearchPlaces extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, GeocoderListener {
+public class SearchPlaces extends AppCompatActivity
+        implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, GeocoderListener {
 
     public static final String currentAddress = "CurrentAddress";
     public static final String locationCoordinates = "LocationCoordinates";
