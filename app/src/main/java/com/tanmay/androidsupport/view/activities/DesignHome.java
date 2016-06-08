@@ -81,12 +81,15 @@ public class DesignHome extends AppCompatActivity implements OnLandingItemClickL
         int position = mRecyclerView.getChildAdapterPosition(view);
         switch (position) {
             case 0:
-                startActivity(new Intent(context, SpeedometerActivity.class));
+                startActivity(new Intent(context, StaggeredGrid.class));
                 break;
             case 1:
-                startActivity(new Intent(context, ParallaxWithWebView.class));
+                startActivity(new Intent(context, SpeedometerActivity.class));
                 break;
             case 2:
+                startActivity(new Intent(context, ParallaxWithWebView.class));
+                break;
+            case 3:
                 startActivity(new Intent(context, Signature.class));
                 break;
             default:
