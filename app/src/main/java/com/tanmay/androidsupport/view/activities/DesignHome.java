@@ -57,6 +57,7 @@ public class DesignHome extends AppCompatActivity implements OnLandingItemClickL
         getSupportActionBar().setTitle("Weird Designs");
         FlurryAgent.logEvent("#TNM--DesignHome_onCreate");
 
+        listItems.add("Staggered Recycler View");
         listItems.add("Speedometer View");
         listItems.add("Parallax with With View");
         listItems.add("Signature");

@@ -7,12 +7,11 @@
         android:required="true" />
     /////////////////////////////////////// MAPS and LOCATION //////////////////////////////////////
     <permission
-        android:name="com.clickcab.consumerapp.permission.MAPS_RECEIVE"
+        android:name="com.tanmay.androidsupport.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-    <uses-permission android:name="com.clickcab.driverapp.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
@@ -68,7 +67,7 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-                <category android:name="com.clickcab.driverapp.pushnotifications" />
+                <category android:name="com.tanmay.androidsupport.pushnotifications" />
             </intent-filter>
         </receiver>
 
@@ -242,7 +241,14 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".view.activities.OtpInput"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_otp_input"
+            android:parentActivityName=".view.activities.PhoneHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.StaggeredGrid"
+            android:label="@string/title_activity_staggered_grid"
             android:theme="@style/AppTheme"></activity>
     </application>
 
