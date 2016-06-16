@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tanmay.androidsupport.view.activities.LocationUpdate"
+    tools:showIn="@layout/activity_location_update">
+
+    <Button
+        android:id="@+id/clu_get_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/clu_start"
+        android:layout_margin="@dimen/activity_margin"
+        android:onClick="onGetLocationClick"
+        android:padding="@dimen/activity_margin"
+        android:textAllCaps="false"
+        android:text="Get Location" />
+
+    <Button
+        android:id="@+id/clu_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textAllCaps="false"
+        android:layout_margin="@dimen/activity_margin"
+        android:onClick="onServiceStartClick"
+        android:padding="@dimen/activity_margin"
+        android:text="Start Location Update Service" />
+
+    <Button
+        android:id="@+id/clu_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_below="@+id/clu_start"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_margin"
+        android:onClick="onServiceStopClick"
+        android:padding="@dimen/activity_margin"
+        android:text="Stop Location Update Service" />
+
+</RelativeLayout>

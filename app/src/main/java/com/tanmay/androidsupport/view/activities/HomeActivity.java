@@ -96,15 +96,15 @@ public class HomeActivity extends AppCompatActivity implements OnDrawerItemClick
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
         String currentDateandTime = sdf.format(new Date());
-        Log.d(TAG, "Date and Time: " + currentDateandTime);
+//        Log.d(TAG, "Date and Time: " + currentDateandTime);
 
 //        testDate();
 
-        quickView.setText("OTP");
+        quickView.setText("Location Update Service");
         quickView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, OtpInput.class);
+                Intent i = new Intent(context, LocationUpdate.class);
                 startActivity(i);
             }
         });
