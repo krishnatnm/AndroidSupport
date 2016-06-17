@@ -43,5 +43,6 @@
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_otp_input">OtpInput</string>
     <string name="title_activity_staggered_grid">StaggeredGrid</string>
+    <string name="title_activity_location_update">LocationUpdate</string>
 
 </resources>

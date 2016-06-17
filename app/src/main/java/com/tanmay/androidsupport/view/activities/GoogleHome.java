@@ -67,6 +67,7 @@ public class GoogleHome extends AppCompatActivity implements OnLandingItemClickL
         listItems.add("Google Places API Autocomplete View");
         listItems.add("Google Directions API");
         listItems.add("Google Fit API");
+        listItems.add("Location Update Service");
 
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(context);
@@ -150,6 +151,9 @@ public class GoogleHome extends AppCompatActivity implements OnLandingItemClickL
                 break;
             case 2:
                 startActivity(new Intent(context, GoogleFit.class));
+                break;
+            case 3:
+                startActivity(new Intent(context, LocationUpdate.class));
                 break;
             default:
                 Toast.makeText(context, "To Be Done!", Toast.LENGTH_SHORT).show();

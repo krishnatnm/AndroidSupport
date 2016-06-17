@@ -249,7 +249,13 @@
         <activity
             android:name=".view.activities.StaggeredGrid"
             android:label="@string/title_activity_staggered_grid"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activities.LocationUpdate"
+            android:label="@string/title_activity_location_update"
             android:theme="@style/AppTheme"></activity>
+
+        <service android:name=".services.LocationUpdateService" />
     </application>
 
 </manifest>
