@@ -29,6 +29,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+        prod {
+            buildConfigField 'String', 'TYPE', '"MAIN"'
+            resValue "string", "app_name", "Android Support"
+            applicationId "com.tanmay.androidsupport"
+            versionName "1.0"
+        }
+        dev {
+            buildConfigField 'String', 'TYPE', '"OTHER"'
+            resValue "string", "app_name", "Android (OTHER) Support"
+            applicationId "com.tanmay.androidsupport.other"
+            versionName "1.0"
+        }
+    }
     dexOptions {
         incremental true
         javaMaxHeapSize "4g"
