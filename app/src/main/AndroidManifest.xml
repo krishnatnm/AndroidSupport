@@ -48,7 +48,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.activities.HomeActivity"
+            android:name=".activities.HomeActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -81,94 +81,94 @@
             android:value="@string/API_KEY" />
 
         <activity
-            android:name=".view.activities.SearchPlaces"
+            android:name=".activities.SearchPlaces"
             android:configChanges="orientation|keyboardHidden"
             android:label="Search Places"
-            android:parentActivityName=".view.activities.GoogleHome"
+            android:parentActivityName=".activities.GoogleHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.GoogleHome"
+            android:name=".activities.GoogleHome"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_google_home"
-            android:parentActivityName=".view.activities.HomeActivity"
+            android:parentActivityName=".activities.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.DrawRoute"
+            android:name=".activities.DrawRoute"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_draw_route"
-            android:parentActivityName=".view.activities.GoogleHome"
+            android:parentActivityName=".activities.GoogleHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.PhoneHome"
+            android:name=".activities.PhoneHome"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_phone_home"
-            android:parentActivityName=".view.activities.HomeActivity"
+            android:parentActivityName=".activities.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.AddContacts"
+            android:name=".activities.AddContacts"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_add_contacts"
-            android:parentActivityName=".view.activities.PhoneHome"
+            android:parentActivityName=".activities.PhoneHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.CopyToClipbpard"
+            android:name=".activities.CopyToClipbpard"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_copy_to_clipbpard"
-            android:parentActivityName=".view.activities.PhoneHome"
+            android:parentActivityName=".activities.PhoneHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.HttpHome"
+            android:name=".activities.HttpHome"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_http_home"
-            android:parentActivityName=".view.activities.HomeActivity"
+            android:parentActivityName=".activities.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.TabsAndViewPager"
+            android:name=".activities.TabsAndViewPager"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_tabs_and_view_pager"
-            android:parentActivityName=".view.activities.PhoneHome"
+            android:parentActivityName=".activities.PhoneHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.OtherHome"
+            android:name=".activities.OtherHome"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_flurry_analytics"
-            android:parentActivityName=".view.activities.HomeActivity"
+            android:parentActivityName=".activities.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.FlurryAnalytics"
+            android:name=".activities.FlurryAnalytics"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_flurry_analytics"
-            android:parentActivityName=".view.activities.PhoneHome"
+            android:parentActivityName=".activities.PhoneHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.SocialHome"
+            android:name=".activities.SocialHome"
             android:configChanges="orientation|keyboardHidden"
             android:label="Social Home"
-            android:parentActivityName=".view.activities.HomeActivity"
+            android:parentActivityName=".activities.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.Facebook"
+            android:name=".activities.Facebook"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_facebook"
-            android:parentActivityName=".view.activities.SocialHome"
+            android:parentActivityName=".activities.SocialHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.Google"
+            android:name=".activities.Google"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_google"
-            android:parentActivityName=".view.activities.SocialHome"
+            android:parentActivityName=".activities.SocialHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
@@ -183,79 +183,84 @@
             android:value="53ef6e274bd80efc6bb7121fa4248cfc2559e621" />
 
         <activity
-            android:name=".view.activities.SpeedometerActivity"
+            android:name=".activities.SpeedometerActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_speedometer_view"
-            android:parentActivityName=".view.activities.DesignHome"
+            android:parentActivityName=".activities.DesignHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.DesignHome"
+            android:name=".activities.DesignHome"
             android:configChanges="orientation|keyboardHidden"
             android:label="Design Home"
-            android:parentActivityName=".view.activities.HomeActivity"
+            android:parentActivityName=".activities.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.GoogleFit"
+            android:name=".activities.GoogleFit"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_google_fit"
-            android:parentActivityName=".view.activities.GoogleHome"
+            android:parentActivityName=".activities.GoogleHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.CropImage"
+            android:name=".activities.CropImage"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_crop_image"
-            android:parentActivityName=".view.activities.GoogleHome"
+            android:parentActivityName=".activities.GoogleHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity android:name="com.android.camera.CropImage" />
         <activity
-            android:name=".view.activities.ParallaxWithWebView"
+            android:name=".activities.ParallaxWithWebView"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_parallax_with_web_view"
-            android:parentActivityName=".view.activities.DesignHome"
+            android:parentActivityName=".activities.DesignHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.Signature"
+            android:name=".activities.Signature"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_signature"
-            android:parentActivityName=".view.activities.DesignHome"
+            android:parentActivityName=".activities.DesignHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.CameraUpload"
+            android:name=".activities.CameraUpload"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_camera_upload"
-            android:parentActivityName=".view.activities.PhoneHome"
+            android:parentActivityName=".activities.PhoneHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.ChatHome"
+            android:name=".activities.ChatHome"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_chat_home"
-            android:parentActivityName=".view.activities.PhoneHome"
+            android:parentActivityName=".activities.PhoneHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.OtpInput"
+            android:name=".activities.OtpInput"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_otp_input"
-            android:parentActivityName=".view.activities.PhoneHome"
+            android:parentActivityName=".activities.PhoneHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.StaggeredGrid"
+            android:name=".activities.StaggeredGrid"
             android:label="@string/title_activity_staggered_grid"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activities.LocationUpdate"
+            android:name=".activities.LocationUpdate"
             android:label="@string/title_activity_location_update"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
 
         <service android:name=".services.LocationUpdateService" />
+
+        <activity
+            android:name=".activities.CustomDialogActivity"
+            android:label="@string/title_activity_custom_dialog"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

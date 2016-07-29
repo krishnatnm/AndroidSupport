@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tanmay.androidsupport.activities.CustomDialogActivity"
+    tools:showIn="@layout/activity_custom_dialog">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_margin_double"
+        android:layout_marginRight="@dimen/activity_margin_double"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:onClick="onRoundedDialogClick"
+        android:text="Dialog with Rounded Corners" />
+
+</LinearLayout>

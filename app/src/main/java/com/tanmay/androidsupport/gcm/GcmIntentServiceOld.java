@@ -11,7 +11,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
-import com.tanmay.androidsupport.view.activities.HomeActivity;
+import com.tanmay.androidsupport.activities.HomeActivity;
 import com.tanmay.androidsupport.R;
 import com.tanmay.androidsupport.utils.ConstantClass;
 

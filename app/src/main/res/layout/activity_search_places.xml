@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".view.activities.HomeActivity">
+    tools:context=".activities.HomeActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
         android:padding="@dimen/activity_margin"
-        tools:context="com.tanmay.androidsupport.view.activities.SearchPlaces">
+        tools:context=".activities.SearchPlaces">
 
         <!-- City and Country Selector -->
         <AutoCompleteTextView

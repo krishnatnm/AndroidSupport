@@ -43,5 +43,8 @@
     <string name="title_activity_otp_input">OtpInput</string>
     <string name="title_activity_staggered_grid">StaggeredGrid</string>
     <string name="title_activity_location_update">LocationUpdate</string>
+    <string name="title_activity_custom_dialog">CustomDialogActivity</string>
+
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
 
 </resources>

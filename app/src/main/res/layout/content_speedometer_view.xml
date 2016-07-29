@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".view.activities.SpeedometerActivity"
+    tools:context=".activities.SpeedometerActivity"
     tools:showIn="@layout/activity_speedometer_view">
 
-    <com.tanmay.androidsupport.view.customui.CustomSpeedometer
+    <com.tanmay.androidsupport.customui.CustomSpeedometer
         android:id="@+id/speedometer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

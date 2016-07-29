@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.tanmay.androidsupport.view.activities.GoogleFit"
+    tools:context=".activities.GoogleFit"
     tools:showIn="@layout/activity_google_fit">
 
 
@@ -22,7 +22,7 @@
         android:layout_height="fill_parent"
         android:layout_below="@id/title_text_view">
 
-        <com.tanmay.androidsupport.view.customui.LogView
+        <com.tanmay.androidsupport.customui.LogView
             android:id="@+id/sample_logview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

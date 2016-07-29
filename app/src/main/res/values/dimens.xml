@@ -2,6 +2,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_margin">16dp</dimen>
     <dimen name="activity_margin_half">8dp</dimen>
+    <dimen name="activity_margin_double">32dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin_less">12dp</dimen>
@@ -53,4 +54,8 @@
     <dimen name="doc_image">128dp</dimen>
 
     <dimen name="text_input_width">100dp</dimen>
+
+    <dimen name="rounded_rectangle_corner">32dp</dimen>
+    <dimen name="rounded_rectangle_stroke">4dp</dimen>
+    <dimen name="rounded_rectangle_elevation">8dp</dimen>
 </resources>

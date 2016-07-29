@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.tanmay.androidsupport.view.customui.DynamicHeightImageView
+    <com.tanmay.androidsupport.customui.DynamicHeightImageView
         android:id="@+id/rgi_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
