@@ -260,6 +260,14 @@
         <activity
             android:name=".activities.CustomDialogActivity"
             android:label="@string/title_activity_custom_dialog"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.SQLiteDatabase"
+            android:label="@string/title_activity_sqlite_database"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.YouTubeActivity"
+            android:label="@string/title_activity_you_tube"
             android:theme="@style/AppTheme"></activity>
     </application>
 

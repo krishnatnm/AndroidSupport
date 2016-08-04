@@ -100,11 +100,11 @@ public class HomeActivity extends AppCompatActivity implements OnDrawerItemClick
 
 //        testDate();
 
-        quickView.setText("Custom Dialogs");
+        quickView.setText("Quick Link");
         quickView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, CustomDialogActivity.class);
+                Intent i = new Intent(context, YouTubeActivity.class);
                 startActivity(i);
             }
         });

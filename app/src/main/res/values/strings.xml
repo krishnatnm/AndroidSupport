@@ -46,5 +46,8 @@
     <string name="title_activity_custom_dialog">CustomDialogActivity</string>
 
     <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="title_activity_sqlite_database">SQLiteDatabase</string>
+    <string name="title_activity_you_tube">YouTubeActivity</string>
+
 
 </resources>

@@ -57,5 +57,7 @@
 
     <dimen name="rounded_rectangle_corner">32dp</dimen>
     <dimen name="rounded_rectangle_stroke">4dp</dimen>
-    <dimen name="rounded_rectangle_elevation">8dp</dimen>
+    <dimen name="rounded_rectangle_elevation">8dp</dimen>'
+
+    <dimen name="dialog_close_button">32dp</dimen>
 </resources>

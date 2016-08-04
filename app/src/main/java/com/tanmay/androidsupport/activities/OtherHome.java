@@ -54,6 +54,7 @@ public class OtherHome extends AppCompatActivity implements OnLandingItemClickLi
         FlurryAgent.logEvent("#TNM--OtherHome_onCreate");
 
         listItems.add("Flurry Analytics");
+        listItems.add("SQLite Database");
 
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(context);
@@ -74,8 +75,10 @@ public class OtherHome extends AppCompatActivity implements OnLandingItemClickLi
         int position = mRecyclerView.getChildAdapterPosition(view);
         switch (position) {
             case 0:
-                Intent i = new Intent(context, FlurryAnalytics.class);
-                startActivity(i);
+                startActivity(new Intent(context, FlurryAnalytics.class));
+                break;
+            case 1:
+                startActivity(new Intent(context, FlurryAnalytics.class));
                 break;
             default:
                 Toast.makeText(context, "To Be Done!", Toast.LENGTH_SHORT).show();
