@@ -22,11 +22,6 @@ public class YouTubeFragment extends Fragment {
 
     public static final String DEVELOPER_KEY = "AIzaSyAB8OqwMtCg5z4hYyjzxjxktg3OBRW-VKg";
     public static final String VIDEO_ID = "IssysxAisfo";
-    private static final int RECOVERY_DIALOG_REQUEST = 1;
-
-//    Context context;
-
-    YouTubePlayerView youTubePlayerFragment;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

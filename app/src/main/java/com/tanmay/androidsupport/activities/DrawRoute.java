@@ -26,11 +26,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.tanmay.androidsupport.R;
 import com.tanmay.androidsupport.dialogs.UtilityDialogs;
+import com.tanmay.androidsupport.interfaces.OnUtilityDialogButtonClickListener;
 import com.tanmay.androidsupport.location.DirectionsAPI;
 import com.tanmay.androidsupport.location.DirectionsJsonParser;
 import com.tanmay.androidsupport.location.GeocoderAPI;
 import com.tanmay.androidsupport.location.GeocoderListener;
-import com.tanmay.androidsupport.interfaces.OnUtilityDialogButtonClickListener;
 
 import org.json.JSONObject;
 

@@ -56,6 +56,7 @@ public class TabsAndViewPager extends AppCompatActivity implements TabHost.OnTab
         mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mAdapter);
         mViewPager.addOnPageChangeListener(this);
+        mViewPager.setOffscreenPageLimit(0);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

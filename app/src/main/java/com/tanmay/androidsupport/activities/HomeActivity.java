@@ -104,7 +104,7 @@ public class HomeActivity extends AppCompatActivity implements OnDrawerItemClick
         quickView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, YouTubeActivity.class);
+                Intent i = new Intent(context, TabsAndViewPager.class);
                 startActivity(i);
             }
         });
